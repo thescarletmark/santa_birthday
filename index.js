@@ -22,12 +22,15 @@ window.addEventListener('load', e => {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="birthday"
-    document.getElementById("birthday").innerHTML = `${days} d ${hours} h ${minutes} m ${seconds} s`;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("birthday").innerHTML = "<p>GIOITE, È IL COMPLEANNO DI MARCO</p> <img src=\"https://media-exp1.licdn.com/dms/image/C4D03AQF-hyVvexXo7Q/profile-displayphoto-shrink_200_200/0/1517249369510?e=1648080000&v=beta&t=VwuAPd9G59b6Eu7kDMpHNOw4qtV_ZNisSJOlFd75cas\" alt=\"Santa\">"
+        document.getElementById("birthday").innerHTML = "<h2>GIOITE, È IL COMPLEANNO DI MARCO</h2><div><img src=\"https://media-exp1.licdn.com/dms/image/C4D03AQF-hyVvexXo7Q/profile-displayphoto-shrink_200_200/0/1517249369510?e=1648080000&v=beta&t=VwuAPd9G59b6Eu7kDMpHNOw4qtV_ZNisSJOlFd75cas\" alt=\"Santa\"></div>"
         
     }
     }, 1000);
